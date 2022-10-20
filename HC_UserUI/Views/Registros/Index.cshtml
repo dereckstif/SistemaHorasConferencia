@@ -1,0 +1,58 @@
+﻿@model IEnumerable<HC_UserUI.Models.Registro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoHoraConferencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Actividad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Pelicula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Minutos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoHoraConferencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_Actividad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_Pelicula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Minutos)
+            </td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="ObtenerDetalles" asp-route-id="@item.Id">Ver</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

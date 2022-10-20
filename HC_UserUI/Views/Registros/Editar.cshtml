@@ -1,0 +1,47 @@
+﻿@model HC_UserUI.Models.Registro
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar registro</h1>
+
+<h4>Registro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Editar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Id_Estudiante" />
+            <input type="hidden" asp-for="TipoHoraConferencia" />
+            <input type="hidden" asp-for="Id_Actividad" />
+            <input type="hidden" asp-for="Id_Pelicula" />
+            <input type="hidden" asp-for="FechaRegistro" />
+            <input type="hidden" asp-for="Archivo" />
+            <input type="hidden" asp-for="Minutos" />
+            <input type="hidden" asp-for="Estado" />
+            <div class="form-group">
+                <label asp-for="TemaCentral" class="control-label">Tema central</label>
+                <input asp-for="TemaCentral" class="form-control" />
+                <span asp-validation-for="TemaCentral" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label">Descripción de lo aprendido</label>
+                <textarea asp-for="Descripcion" class="form-control"></textarea>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

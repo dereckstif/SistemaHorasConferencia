@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HC_API", "HC_API\HC_API.csproj", "{AE732558-B7ED-475C-B6A9-AB9E264860A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HC_AdminUI", "HC_AdminUI\HC_AdminUI.csproj", "{AEFFFDF1-0FDB-490F-99FD-AF521E6BBC03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HC_UserUI", "HC_UserUI\HC_UserUI.csproj", "{B6796023-F043-4D15-9FC5-38EA5B9666F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE732558-B7ED-475C-B6A9-AB9E264860A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE732558-B7ED-475C-B6A9-AB9E264860A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE732558-B7ED-475C-B6A9-AB9E264860A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE732558-B7ED-475C-B6A9-AB9E264860A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEFFFDF1-0FDB-490F-99FD-AF521E6BBC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFFFDF1-0FDB-490F-99FD-AF521E6BBC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFFFDF1-0FDB-490F-99FD-AF521E6BBC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFFFDF1-0FDB-490F-99FD-AF521E6BBC03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6796023-F043-4D15-9FC5-38EA5B9666F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6796023-F043-4D15-9FC5-38EA5B9666F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6796023-F043-4D15-9FC5-38EA5B9666F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6796023-F043-4D15-9FC5-38EA5B9666F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25D65D19-679E-4BC9-A549-59B044708060}
+	EndGlobalSection
+EndGlobal

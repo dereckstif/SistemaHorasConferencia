@@ -1,0 +1,57 @@
+﻿@model HC_AdminUI.Models.Registro
+
+@{
+    ViewData["Title"] = "Registrar Pelicula";
+}
+
+<h1>Registrar Pelicula</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RegistrarPelicula">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id_Estudiante" class="control-label"></label>
+                <input asp-for="Id_Estudiante" class="form-control" />
+                <span asp-validation-for="Id_Estudiante" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_Pelicula" class="control-label"></label>
+                <select asp-for="Id_Pelicula" class="form-select" asp-items="@(new SelectList(ViewBag.Peliculas,"Id","Titulo"))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Archivo" class="control-label"></label>
+                <input asp-for="Archivo" class="form-control" />
+                <span asp-validation-for="Archivo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Minutos" class="control-label"></label>
+                <input asp-for="Minutos" class="form-control" />
+                <span asp-validation-for="Minutos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TemaCentral" class="control-label"></label>
+                <input asp-for="TemaCentral" class="form-control" />
+                <span asp-validation-for="TemaCentral" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <textarea asp-for="Descripcion" class="form-control"></textarea>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="TipoHoraConferencia" value="Película" />
+            <div class="form-group mt-4">
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a los registros</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

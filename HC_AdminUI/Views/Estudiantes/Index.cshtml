@@ -1,0 +1,66 @@
+﻿@model IEnumerable<HC_AdminUI.Models.Estudiante>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enfasis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinutosRegistrados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesRegistradas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enfasis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinutosRegistrados)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActividadesRegistradas)
+            </td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Detalles" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-controller="Registros" asp-action="RegistrosEstudiante" asp-route-id="@item.Id">Registros</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

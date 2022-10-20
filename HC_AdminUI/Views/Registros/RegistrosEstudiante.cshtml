@@ -1,0 +1,88 @@
+﻿@model IEnumerable<HC_AdminUI.Models.Registro>
+
+@{
+    ViewData["Title"] = "RegistrosEstudiante";
+}
+
+<h1>RegistrosEstudiante</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Estudiante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoHoraConferencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Actividad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Pelicula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Archivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Minutos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TemaCentral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_Estudiante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoHoraConferencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_Actividad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_Pelicula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Archivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Minutos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TemaCentral)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+               <a asp-action="ObtenerDetalles" asp-route-id="@item.Id">Ver</a> |
+               <a asp-action="Eliminar" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
